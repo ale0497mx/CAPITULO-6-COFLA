@@ -1,6 +1,6 @@
 const contenedor = document.querySelector(".flex-container");
 function crearLlave(nombre, modelo, precio ){
-    img = "<img src ='llave.png'>"
+    img = "<img class='llave-img' src ='llave.png'>"
     nombre = `<h2> ${nombre} </h2>`;
     modelo = `<h3> ${modelo} </h3>`;
     precio = `<p>Precio: <b>$${precio}.00</b></p>`;
