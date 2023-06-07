@@ -1,14 +1,24 @@
 const contenedor = document.querySelector(".flex-container");
-
 function crearLlave(nombre, modelo, precio ){
-    img = "llave.png"
+    img = "<img src ='llave.png'>"
     nombre = `<h2> ${nombre} </h2>`;
     modelo = `<h3> ${modelo} </h3>`;
     precio = `<p>Precio: <b>${precio}</b></p>`;
-    return[nombre, modelo, precio, img];
+    return[img, nombre, modelo, precio, ];
 }
 
-const llave = crearLlave( "Llave1", "Modelo X", "33");
+let documentFragment = document.createDocumentFragment();
 
-contenedor.innerHTML = llave[0] + llave[1] + llave[2];
 
+for(var i =1; i < 21; i++){
+    let modeloRadom = Math.round(Math.random() * 10000);
+    let precioRadom = Math.round(Math.random() * 10+30);
+    let llave = crearLlave(`llave ${i}`,`modelo: ${modeloRadom}`,precioRadom);
+
+    let div = document.createElement('DIV');
+    div.classList.add(`item-${i}`,`flex-item`);
+    div.innerHTML = llave[0] + llave[1] + llave[2] + llave[3];
+    documentFragment.appendChild(div);
+}
+
+contenedor.appendChild(documentFragment);
