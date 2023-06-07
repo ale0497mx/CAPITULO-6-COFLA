@@ -3,7 +3,7 @@ function crearLlave(nombre, modelo, precio ){
     img = "<img src ='llave.png'>"
     nombre = `<h2> ${nombre} </h2>`;
     modelo = `<h3> ${modelo} </h3>`;
-    precio = `<p>Precio: <b>${precio}</b></p>`;
+    precio = `<p>Precio: <b>$${precio}.00</b></p>`;
     return[img, nombre, modelo, precio, ];
 }
 
