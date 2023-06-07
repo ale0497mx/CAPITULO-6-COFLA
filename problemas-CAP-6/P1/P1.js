@@ -1,3 +1,3 @@
-function crearLLave(nombre, modelo, precio ){
-    
+function crearLlave(nombre, modelo, precio ){
+
 }
