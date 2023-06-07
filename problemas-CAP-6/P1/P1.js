@@ -1,4 +1,9 @@
+
 const contenedor = document.querySelector(".flex-container");
+const boton = document.querySelector(".send-button");
+boton.value = boton.value.toUpperCase();
+
+
 function crearLlave(nombre, modelo, precio ){
     img = "<img class='llave-img' src ='llave.png'>"
     nombre = `<h2> ${nombre} </h2>`;
@@ -7,15 +12,17 @@ function crearLlave(nombre, modelo, precio ){
     return[img, nombre, modelo, precio, ];
 }
 
+
 let documentFragment = document.createDocumentFragment();
-
-
 for(var i =1; i < 21; i++){
     let modeloRadom = Math.round(Math.random() * 10000);
     let precioRadom = Math.round(Math.random() * 10+30);
     let llave = crearLlave(`llave ${i}`,`modelo: ${modeloRadom}`,precioRadom);
 
     let div = document.createElement('DIV');
+    div.addEventListener("click",()=>{
+        document.querySelector(".key-data").value = modeloRadom;
+    });
     div.tabIndex = i;
     div.classList.add(`item-${i}`,`flex-item`);
     div.innerHTML = llave[0] + llave[1] + llave[2] + llave[3];

@@ -4,6 +4,9 @@
     font-family: sans-serif;
     color: #333;
 }
+body{
+    overflow-x: hidden;
+}
 
 .flex-item{
     flex-grow: 1;
@@ -32,4 +35,21 @@ p b{
 .llave-img{
     width: 300px;
     
+}
+form{
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+}
+input[type="submit"]{
+    border-radius: 5px;
+    background: #a0dd7a;
+    color: #fff;
+    border: none;
+    padding: 12px 36px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+input[type="submit"]:hover{
+    background: #317124;
 }
